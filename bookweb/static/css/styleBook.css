@@ -1,0 +1,281 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --windows-color: #0078d7;
+            --linux-color: #ff6600;
+            --macos-color: #555555;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo i {
+            color: var(--light);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tabs-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .tabs {
+            display: flex;
+            background: var(--dark);
+        }
+
+        .tab {
+            flex: 1;
+            padding: 1.2rem;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .tab.active {
+            border-bottom: 3px solid var(--secondary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .windows-tab {
+            background-color: var(--windows-color);
+        }
+
+        .linux-tab {
+            background-color: var(--linux-color);
+        }
+
+        .macos-tab {
+            background-color: var(--macos-color);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 2.5rem;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .os-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .os-icon {
+            font-size: 3rem;
+            margin-right: 1.5rem;
+        }
+
+        .windows-icon {
+            color: var(--windows-color);
+        }
+
+        .linux-icon {
+            color: var(--linux-color);
+        }
+
+        .macos-icon {
+            color: var(--macos-color);
+        }
+
+        .os-title {
+            font-size: 2.2rem;
+            color: var(--dark);
+        }
+
+        .os-description {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .info-section {
+            margin-bottom: 2rem;
+        }
+
+        .info-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-section p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .os-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .os-image:hover {
+            transform: translateY(-5px);
+        }
+
+        .version-list {
+            list-style-type: none;
+        }
+
+        .version-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .version-list li:last-child {
+            border-bottom: none;
+        }
+
+        .version-list i {
+            color: var(--secondary);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .author {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .os-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .os-icon {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }

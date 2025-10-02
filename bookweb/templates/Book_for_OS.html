@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОС: Справочник по операционным системам</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleBook.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+        <h1>Справочник по операционным системам</h1>
+        <p class="subtitle">Подробный гид по Windows, Linux и Mac OS для начинающих пользователей</p>
+    </header>
+
+    <div class="tabs-container">
+        <div class="tabs">
+            <div class="tab windows-tab active" data-tab="windows">
+                <i class="fab fa-windows"></i> Windows
+            </div>
+            <div class="tab linux-tab" data-tab="linux">
+                <i class="fab fa-linux"></i> Linux
+            </div>
+            <div class="tab macos-tab" data-tab="macos">
+                <i class="fab fa-apple"></i> Mac OS
+            </div>
+        </div>
+
+        <div class="tab-content active" id="windows-content">
+            <div class="os-header">
+                <div class="os-icon windows-icon">
+                    <i class="fab fa-windows"></i>
+                </div>
+                <div>
+                    <h2 class="os-title">Microsoft Windows</h2>
+                    <p class="os-description">Самая популярная операционная система для персональных компьютеров</p>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div>
+                    <div class="info-section">
+                        <h3><i class="fas fa-info-circle"></i> Общая информация</h3>
+                        <p>Windows — семейство проприетарных операционных систем корпорации Microsoft. Первая версия была выпущена в 1985 году. Система ориентирована на удобство использования и широкую совместимость с различным программным обеспечением.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3><i class="fas fa-history"></i> История и развитие</h3>
+                        <p>Windows прошла долгий путь от графической оболочки для MS-DOS до полноценной операционной системы. Ключевые вехи: Windows 95, Windows XP, Windows 7, Windows 10 и Windows 11.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3><i class="fas fa-star"></i> Основные преимущества</h3>
+                        <ul class="version-list">
+                            <li><i class="fas fa-check"></i> Широкая совместимость с программами и играми</li>
+                            <li><i class="fas fa-check"></i> Простота использования для новичков</li>
+                            <li><i class="fas fa-check"></i> Поддержка большого количества устройств</li>
+                            <li><i class="fas fa-check"></i> Регулярные обновления безопасности</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="image-gallery">
+                    <img src="{{ url_for('static', filename='image/WindowsImage/95AdFy2Xc-eDVJTuQs22BA.jpeg') }}" alt="Windows 11" class="os-image">
+                    <img src="{{ url_for('static', filename='image/WindowsImage/i.webp') }}" alt="Windows Desktop" class="os-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="linux-content">
+            <div class="os-header">
+                <div class="os-icon linux-icon">
+                    <i class="fab fa-linux"></i>
+                </div>
+                <div>
+                    <h2 class="os-title">Linux дистрибутивы</h2>
+                    <p class="os-description">Семейство Unix-подобных операционных систем с открытым исходным кодом</p>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div>
+                    <div class="info-section">
+                        <h3><i class="fas fa-info-circle"></i> Общая информация</h3>
+                        <p>Linux — операционная система с открытым исходным кодом, распространяемая свободно. Имеет множество дистрибутивов (сборок), каждый из которых предназначен для определенных целей и пользователей.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3><i class="fas fa-history"></i> Популярные дистрибутивы</h3>
+                        <ul class="version-list">
+                            <li><i class="fas fa-cog"></i> Ubuntu — самый популярный дистрибутив для начинающих</li>
+                            <li><i class="fas fa-cog"></i> Fedora — дистрибутив с самыми современными технологиями</li>
+                            <li><i class="fas fa-cog"></i> Debian — стабильная система для серверов и рабочих станций</li>
+                            <li><i class="fas fa-cog"></i> Arch Linux — дистрибутив для опытных пользователей</li>
+                            <li><i class="fas fa-cog"></i> Linux Mint — удобная система на базе Ubuntu</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h3><i class="fas fa-star"></i> Основные преимущества</h3>
+                        <ul class="version-list">
+                            <li><i class="fas fa-check"></i> Бесплатность и открытый исходный код</li>
+                            <li><i class="fas fa-check"></i> Высокая безопасность и стабильность</li>
+                            <li><i class="fas fa-check"></i> Гибкость и настраиваемость</li>
+                            <li><i class="fas fa-check"></i> Широкая поддержка сообщества</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="image-gallery">
+                    <img src="{{ url_for('static', filename='image/LinuxImage/lin.webp') }}" alt="Linux Desktop" class="os-image">
+                    <img src="{{ url_for('static', filename='image/LinuxImage/maxresdefault.jpg') }}" alt="Linux Terminal" class="os-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="macos-content">
+            <div class="os-header">
+                <div class="os-icon macos-icon">
+                    <i class="fab fa-apple"></i>
+                </div>
+                <div>
+                    <h2 class="os-title">Mac OS (macOS)</h2>
+                    <p class="os-description">Операционная система для компьютеров Apple Macintosh</p>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div>
+                    <div class="info-section">
+                        <h3><i class="fas fa-info-circle"></i> Общая информация</h3>
+                        <p>macOS — проприетарная операционная система, разрабатываемая компанией Apple исключительно для своих компьютеров Mac. Известна своим стабильностью, безопасностью и элегантным интерфейсом.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3><i class="fas fa-history"></i> История и версии</h3>
+                        <p>Первая версия системы (тогда называвшаяся Mac OS X) была выпущена в 2001 году. С тех пор Apple регулярно выпускает крупные обновления, называя их в честь калифорнийских местностей (Big Sur, Monterey, Ventura).</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3><i class="fas fa-star"></i> Основные преимущества</h3>
+                        <ul class="version-list">
+                            <li><i class="fas fa-check"></i> Высокая стабильность и безопасность</li>
+                            <li><i class="fas fa-check"></i> Интуитивно понятный и эстетичный интерфейс</li>
+                            <li><i class="fas fa-check"></i> Глубокая интеграция с экосистемой Apple</li>
+                            <li><i class="fas fa-check"></i> Оптимизация для работы с мультимедиа</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="image-gallery">
+                    <img src="{{ url_for('static', filename='image/MacOSImage/mac.webp') }}" alt="Mac OS Desktop" class="os-image">
+                    <img src="{{ url_for('static', filename='image/MacOSImage/photo-1517336714731-489689fd1ca8.avif') }}" alt="Macbook" class="os-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="author">NAZGID</div>
+        <div class="social-links">
+            <a href="https://dzen.ru/chillrok?share_to=link" class="social-link">
+                <i class="fab fa-yandex"></i>
+            </a>
+            <a href="https://t.me/chillrok" class="social-link">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://github.com/NaZzmutdinoVv" class="social-link">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="copyright">© 2025 Справочник по операционным системам. Все права защищены.</div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/scriptBook.js') }}"></script>
+</body>
+</html>
