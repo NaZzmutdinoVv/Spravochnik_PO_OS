@@ -6,5 +6,9 @@ app = Flask(__name__)
 def index():
     return render_template('Book_for_OS.html')
 
+#@app.route('/KnyaZz')
+#def Kazan():
+    #return render_template('two.html')
+
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
